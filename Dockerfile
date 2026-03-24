@@ -1,4 +1,2 @@
-FROM openjdk:17
-WORKDIR /app
-COPY target/*.jar app.jar
-ENTRYPOINT ["java","-jar","app.jar"]
+FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/index.html
